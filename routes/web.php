@@ -16,6 +16,10 @@ use Inertia\Inertia;
 |
 */
 
+Route::get('/backcolor', function (){
+    return Inertia::render('back');
+});
+
 Route::get('/', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
